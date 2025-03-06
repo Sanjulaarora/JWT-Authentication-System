@@ -44,7 +44,7 @@ export const passwordReset = async (req, res) => {
         user.password = hashedPassword;
         await user.save();
 
-        console.log("Password Reset successfully");
+        console.log("User Password Reset Successfully");
         return res.status(200).json({ message: "Password Reset Successfully", success: true });
     } catch (error) {
         console.log("Error in password reset:", error.message);
